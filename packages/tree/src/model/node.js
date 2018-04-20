@@ -102,6 +102,13 @@ export default class Node {
       }
     }
 
+    if (props && typeof props.loaded !== 'undefined') {
+      const isLoaded = getPropertyFromData(this, 'loaded');
+      if (typeof isLoaded === 'boolean') {
+        this.loaded = isLoaded;
+      }
+    }
+
     if (store.lazy !== true && this.data) {
       this.setData(this.data);
 

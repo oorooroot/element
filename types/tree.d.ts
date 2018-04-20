@@ -5,6 +5,7 @@ import { ElementUIComponent } from './component'
 export interface TreeNode {
   id?: any,
   label?: string,
+  loaded?: boolean,  
   isLeaf?: boolean,
   children?: TreeNode[]
 }
